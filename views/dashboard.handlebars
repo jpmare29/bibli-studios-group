@@ -1,0 +1,21 @@
+<div>
+<form class="movie-form">
+  <div>
+    <label for="add-movie" class="add-movie">Add Movie:</label>
+    <input type="text" id="add-movie" />
+  </div>
+  <div>
+    <button type="submit" class="btn btn-primary" id="addmovie">Add Movie</button>
+  </div>
+</form>
+    {{#if movies.length}}
+    <div class="container">
+        <h1 id="allmovies">All Movies</h1>
+        {{#each movies as |movie|}}
+        {{> movies movie}}
+        {{/each}}
+    </div>
+    {{/if}}
+</div>
+
+<script src="/js/addMovie.js"></script>
